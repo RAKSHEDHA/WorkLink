@@ -1,20 +1,21 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, browserLocalPersistence, setPersistence } from "firebase/auth";
 
+// Using import.meta.env for Vite-based security
 const firebaseConfig = {
-  apiKey: "AIzaSyDJ4JBUgk12jjRx4peix3QLiITP5zKu26Q",
-  authDomain: "worklink-new.firebaseapp.com",
-  projectId: "worklink-new",
-  storageBucket: "worklink-new.firebasestorage.app",
-  messagingSenderId: "863025598683",
-  appId: "1:863025598683:web:5426d2ef3e1096f9dc7cfe",
-  measurementId: "G-TDLEJC8GSY"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
-// Initialize persistence
+// Initialize persistence to keep users logged in
 setPersistence(auth, browserLocalPersistence)
   .catch((err) => console.error("Firebase persistence error:", err));
 
