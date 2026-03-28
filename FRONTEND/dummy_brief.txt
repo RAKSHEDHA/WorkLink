@@ -1,0 +1,3 @@
+This is a sample project specification document used for E2E testing of the WorkLink platform's file attachment system.
+Project Name: Enterprise React Re-architecture
+Budget: $40-$90/hr

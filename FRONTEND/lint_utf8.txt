@@ -1,0 +1,169 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+E:\WORKLINK\FRONTEND\src\components\SpendingChart.tsx
+  12:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\components\layout\ClientLayout.tsx
+  33:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\components\layout\FreelancerLayout.tsx
+   2:24  error  'useLocation' is defined but never used   @typescript-eslint/no-unused-vars
+  40:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\components\ui\badge.tsx
+  52:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\WORKLINK\FRONTEND\src\components\ui\button.tsx
+  58:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\WORKLINK\FRONTEND\src\components\ui\tabs.tsx
+  80:52  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\WORKLINK\FRONTEND\src\context\AuthContext.tsx
+  38:21  error  'error' is assigned a value but never used                                                                                      @typescript-eslint/no-unused-vars
+  85:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\WORKLINK\FRONTEND\src\pages\auth\AuthHub.tsx
+   68:6   warning  React Hook useEffect has missing dependencies: 'authLoading' and 'loading'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+   70:47  error    Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   86:21  error    Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  123:19  error    Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  158:19  error    Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\client\Analytics.tsx
+   41:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  140:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\client\FreelancerTime.tsx
+  1:10  error  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\WORKLINK\FRONTEND\src\pages\client\Messages.tsx
+   2:10  error  'Search' is defined but never used        @typescript-eslint/no-unused-vars
+  10:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  11:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  12:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\client\Timesheets.tsx
+  3:52  error  'Download' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx
+    2:10   error  'Button' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   10:26   error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:10:26
+   8 |   const diaryEntries = Array.from({ length: 6 }).map((_, i) => ({
+   9 |     time: `10:${i}0 AM`,
+> 10 |     activity: Math.floor(Math.random() * 40) + 60, // 60-100%
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  11 |     isIdle: Math.random() > 0.8
+  12 |   }));
+  13 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/purity
+   11:13   error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:11:13
+   9 |     time: `10:${i}0 AM`,
+  10 |     activity: Math.floor(Math.random() * 40) + 60, // 60-100%
+> 11 |     isIdle: Math.random() > 0.8
+     |             ^^^^^^^^^^^^^ Cannot call impure function
+  12 |   }));
+  13 |
+  14 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react-hooks/purity
+  103:143  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:103:143
+  101 |               {diaryEntries.map((entry, idx) => (
+  102 |                 <div key={`b-${idx}`} className="group relative">
+> 103 |                   <div className={`aspect-video rounded-xl border-2 flex items-center justify-center overflow-hidden mb-3 transition-colors ${Math.random() > 0.9 ? 'border-amber-200 bg-amber-50' : 'border-slate-200 bg-slate-50 group-hover:border-blue-400 cursor-pointer'}`}>
+      |                                                                                                                                               ^^^^^^^^^^^^^ Cannot call impure function
+  104 |                     {Math.random() > 0.9 ? (
+  105 |                        <span className="text-xs font-bold text-amber-600">No Activity</span>
+  106 |                     ) : (  react-hooks/purity
+  104:22   error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:104:22
+  102 |                 <div key={`b-${idx}`} className="group relative">
+  103 |                   <div className={`aspect-video rounded-xl border-2 flex items-center justify-center overflow-hidden mb-3 transition-colors ${Math.random() > 0.9 ? 'border-amber-200 bg-amber-50' : 'border-slate-200 bg-slate-50 group-hover:border-blue-400 cursor-pointer'}`}>
+> 104 |                     {Math.random() > 0.9 ? (
+      |                      ^^^^^^^^^^^^^ Cannot call impure function
+  105 |                        <span className="text-xs font-bold text-amber-600">No Activity</span>
+  106 |                     ) : (
+  107 |                        <div className="w-full h-full bg-slate-200 relative">                                                                                                 react-hooks/purity
+  117:63   error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:117:63
+  115 |                     <span className="text-xs font-bold text-slate-600">11:{idx}0 AM</span>
+  116 |                     <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden">
+> 117 |                        <div className={`h-full rounded-full ${Math.random() > 0.9  ? 'bg-amber-400' : 'bg-emerald-500'}`} style={{ width: `${Math.floor(Math.random() * 40) + 60}%` }}></div>
+      |                                                               ^^^^^^^^^^^^^ Cannot call impure function
+  118 |                     </div>
+  119 |                   </div>
+  120 |                 </div>                                                                                                                                                                                                 react-hooks/purity
+  117:153  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\WORKLINK\FRONTEND\src\pages\client\WorkDiaries.tsx:117:153
+  115 |                     <span className="text-xs font-bold text-slate-600">11:{idx}0 AM</span>
+  116 |                     <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden">
+> 117 |                        <div className={`h-full rounded-full ${Math.random() > 0.9  ? 'bg-amber-400' : 'bg-emerald-500'}`} style={{ width: `${Math.floor(Math.random() * 40) + 60}%` }}></div>
+      |                                                                                                                                                         ^^^^^^^^^^^^^ Cannot call impure function
+  118 |                     </div>
+  119 |                   </div>
+  120 |                 </div>                                                                                                      react-hooks/purity
+
+E:\WORKLINK\FRONTEND\src\pages\freelancer\JobFeed.tsx
+  17:36  error  Unexpected any. Specify a different type                               @typescript-eslint/no-explicit-any
+  66:56  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+E:\WORKLINK\FRONTEND\src\pages\freelancer\Profile.tsx
+  2:76  error  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\WORKLINK\FRONTEND\src\pages\freelancer\ProposalManager.tsx
+  10:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\recruiter\Dashboard.tsx
+  23:9  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\recruiter\KanbanBoard.tsx
+  35:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\recruiter\TalentSearch.tsx
+  10:42  error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  14:10  error  'minRate' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  14:19  error  'setMinRate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  15:10  error  'maxRate' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  15:19  error  'setMaxRate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+E:\WORKLINK\FRONTEND\src\pages\shared\JobDetail.tsx
+  12:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  22:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  75:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\shared\PublicProfile.tsx
+  16:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\shared\SuccessHub.tsx
+  105:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  106:60  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\WORKLINK\FRONTEND\src\pages\shared\Workroom.tsx
+  91:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+G£û 49 problems (48 errors, 1 warning)
+
+

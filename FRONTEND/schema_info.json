@@ -1,0 +1,54 @@
+{
+  "profiles": [
+    "id",
+    "full_name",
+    "role",
+    "is_onboarded",
+    "bio",
+    "avatar_url",
+    "header_url",
+    "skills",
+    "company_name",
+    "industry",
+    "website",
+    "hourly_rate",
+    "rating",
+    "location",
+    "earned",
+    "jobs_completed",
+    "updated_at",
+    "created_at"
+  ],
+  "jobs": [
+    "id",
+    "recruiter_id",
+    "title",
+    "description",
+    "category",
+    "skills",
+    "budget_min",
+    "budget_max",
+    "status",
+    "created_at"
+  ],
+  "proposals": "Empty",
+  "contracts": [
+    "id",
+    "job_id",
+    "recruiter_id",
+    "freelancer_id",
+    "total_budget",
+    "status",
+    "created_at"
+  ],
+  "milestones": [
+    "id",
+    "contract_id",
+    "title",
+    "amount",
+    "status",
+    "released_at",
+    "created_at"
+  ],
+  "applicants": "Empty"
+}
